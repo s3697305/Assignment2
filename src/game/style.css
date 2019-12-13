@@ -1,0 +1,21 @@
+.root{
+    -fx-background-image: url("file:src/img/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1000 700;
+    -fx-background-position: center center;
+    -fx-background-insets: 0.5;
+    /*-fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);*/
+}
+
+.BorderPane {
+    -fx-background-image: url("file:src/img/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1000 700;
+    -fx-background-position: center center;
+    -fx-background-insets: 0.5;
+    /*-fx-opacity: 0.5;*/
+}
+
+.btVolume {
+    -fx-background-image: url("file:src/img/back.png");
+}

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--        RMIT University Vietnam-->
+<!--        Course: INTE2512 Object-Oriented Programming-->
+<!--        Semester: 2019C-->
+<!--        Assessment: Assignment 2-->
+<!--        Author: Nguyen Quoc Hoang-->
+<!--        ID: s3697305-->
+<!--        Created  date: 11/12/2019-->
+<!--        Last modified: 15/12/2019-->
+<!--        Acknowledgement:-->
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" styleClass="BorderPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.Controller">
+   <left>
+      <Pane prefHeight="505.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212b2f" height="548.0" layoutX="68.0" layoutY="-1.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="503.0" />
+         </children></Pane>
+   </left>
+   <top>
+      <Pane prefHeight="120.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="95.0" layoutX="-2.0" layoutY="-2.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="1004.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#e80b0b" />
+                        <Stop color="#e80b0b" offset="0.007518796992481203" />
+                        <Stop color="#c7d313" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <GaussianBlur radius="5.0" />
+               </effect>
+            </Rectangle>
+            <Text fill="#eaff00" layoutX="130.0" layoutY="70.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="4.0" text="SCORE:" textAlignment="CENTER" wrappingWidth="199.107421875">
+               <font>
+                  <Font name="BigNoodleTitling" size="70.0" />
+               </font>
+            </Text>
+            <Text fill="#eaff00" layoutX="294.0" layoutY="73.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="4.0" text="100" textAlignment="CENTER" wrappingWidth="164.107421875">
+               <font>
+                  <Font name="BigNoodleTitling" size="80.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <right>
+      <Pane prefHeight="540.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3f51c" height="48.0" layoutX="40.0" layoutY="141.0" stroke="#38168c" strokeType="INSIDE" strokeWidth="2.0" width="340.0" />
+            <Button layoutX="212.0" layoutY="494.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="167.0" text="Menu" />
+            <Text fill="#eaff00" layoutX="27.0" layoutY="119.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="4.0" text="TIME" textAlignment="CENTER" wrappingWidth="132.107421875">
+               <font>
+                  <Font name="BigNoodleTitling" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#eaff00" layoutX="182.0" layoutY="119.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="4.0" text="1:59:12" textAlignment="CENTER" wrappingWidth="161.107421875">
+               <font>
+                  <Font name="BigNoodleTitling" size="60.0" />
+               </font>
+            </Text>
+            <Button layoutX="139.0" layoutY="494.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="54.0" text="Vol" />
+         </children>
+      </Pane>
+   </right>
+   <bottom>
+      <Pane prefHeight="40.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <GridPane hgap="10.0" prefHeight="304.0" prefWidth="626.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="154.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT">
+               <image>
+                  <Image url="@../img/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="130.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../img/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="10.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="10.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="130.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="250.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="113.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="216.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="319.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="423.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="216.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="319.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="423.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="319.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="128.0" fitWidth="145.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@../img/vanhau.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </children>
+      </GridPane>
+   </center>
+<!--    <stylesheets>-->
+<!--        <URL value="@style.css" />-->
+<!--    </stylesheets>-->
+</BorderPane>

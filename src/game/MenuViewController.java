@@ -1,5 +1,16 @@
-package game;
+/*
+  RMIT University Vietnam
+  Course: INTE2512 Object-Oriented Programming
+  Semester: 2019C
+  Assessment: Assignment 2
+  Author: Nguyen Quoc Hoang
+  ID: s3697305
+  Created  date: 11/12/2019
+  Last modified: 16/12/2019
+  Acknowledgement: javafx Media Player by Prof. Quang
+*/
 
+package game;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,33 +20,52 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MenuViewController {
+public class MenuViewController implements Initializable {
 
-//    public void initialize(URL location, ResourceBundle resources) {
-//
-//    }
+    Player player = new Player();
 
-    public void btPlay (ActionEvent event) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GameView.fxml"));
-        Scene scene = new Scene(root, 1000, 700);
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
-        Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 
-        primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
-        primaryStage.show();
     }
 
+    @FXML TextField playerNameTF = new TextField();
+    public void setPlayerNameTF() {
+        player.setName(playerNameTF.getText());
+        //System.out.println("Set" + player.getName());
+    }
+
+
+    public void changeToGameView(ActionEvent event) throws IOException {
+        setPlayerNameTF();
+        //System.out.println("GameView: " + player.getName());
+
+        FXMLLoader loader = new FXMLLoader();
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        loader.setLocation(getClass().getResource("GameView.fxml"));
+        Parent gameViewParent = loader.load();
+
+        GameViewController gameViewController = loader.getController();
+        gameViewController.setHelloPlayer(playerNameTF.getText());
+
+        Scene gameViewScene = new Scene(gameViewParent, 1000, 700);
+        stage.setScene(gameViewScene);
+
+    }
 
 }

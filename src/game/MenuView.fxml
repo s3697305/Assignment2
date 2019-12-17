@@ -11,15 +11,15 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField alignment="CENTER" layoutX="377.0" layoutY="326.0" prefHeight="49.0" prefWidth="228.0" promptText=":D">
+            <TextField fx:id="playerNameTF" alignment="CENTER" layoutX="377.0" layoutY="326.0" onAction="#setPlayerNameTF" prefHeight="49.0" prefWidth="228.0" promptText="(￣▽￣)">
                <font>
                   <Font size="20.0" />
                </font></TextField>
-            <Button layoutX="436.0" layoutY="434.0" mnemonicParsing="false" onAction="#btPlay" prefHeight="61.0" prefWidth="110.0" styleClass="Button" stylesheets="@style.css" text="Play!" textFill="WHITE">
+            <Button layoutX="436.0" layoutY="434.0" mnemonicParsing="false" onAction="#changeToGameView" prefHeight="61.0" prefWidth="110.0" styleClass="Button" stylesheets="@style.css" text="Play!" textFill="WHITE">
                <font>
                   <Font name="BigNoodleTitling" size="33.0" />
                </font></Button>
-            <Text layoutX="247.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="WelcomeText" text="Please enter your name" />
+            <Text layoutX="313.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="WelcomeText" text="enter your name" textAlignment="CENTER" />
          </children>
       </Pane>
    </center>

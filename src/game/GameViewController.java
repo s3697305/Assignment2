@@ -6,8 +6,8 @@
   Author: Nguyen Quoc Hoang
   ID: s3697305
   Created  date: 11/12/2019
-  Last modified: 15/12/2019
-  Acknowledgement:
+  Last modified: 16/12/2019
+  Acknowledgement: javafx Media Player by Prof. Quang
 */
 
 package game;
@@ -27,6 +27,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -36,28 +37,26 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class GameViewController implements Initializable {
 
-    @FXML
-    private ImageView img1 = new ImageView("file:src/img/hoangduc.jpg");
+    @FXML private ImageView img1 = new ImageView("file:src/img/hoangduc.jpg");
 
-    @FXML
-    private Button btVolume;
+    @FXML private Button btVolume;
 
-    @FXML
-    private Button menu;
+    @FXML private Button menu;
 
     private MediaPlayer mediaPlayer;
 
-    public void initialize(URL location, ResourceBundle resources) {
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         playMusic();
         startTimer();
     }
-
-
 
     /* Function SOUND */
 
@@ -94,22 +93,35 @@ public class GameViewController implements Initializable {
     /* Function TIME */
 
     private Timeline timer = new Timeline();
-    private static Integer defaultTime = 10;
+    private static Integer defaultTime = 120;
+    private Integer wd = 330;
+
 
     @FXML Text timerText;
     @FXML Text timeText;
+    @FXML Rectangle timeRect = new Rectangle();
 
     private void startTimer() {
 
         KeyFrame frame = new KeyFrame(Duration.millis(1000), event -> {
             int min = defaultTime / 60;
             int sec = defaultTime % 60;
+
             defaultTime--;
+            timeRect.setWidth(wd);
+            wd = wd - (wd/defaultTime);
+
+
+            //System.out.println(score);
             String showTime = String.format("%02d", min) + ":" + String.format("%02d", sec);
             timerText.setText(showTime);
-            System.out.println(defaultTime);
+
             if(defaultTime == -2) {
-                //defaultTime = 10;
+                defaultTime = 10;
+                timeRect.setWidth(0);
+
+
+                //System.out.println(upTimer);
                 timer.stop();
                 timeText.setText("");
                 timerText.setTranslateX(-50);
@@ -124,17 +136,29 @@ public class GameViewController implements Initializable {
 
 
     public void btMenu (ActionEvent event) throws Exception {
-//        Parent root = FXMLLoader.load(getClass().getResource("MenuView.fxml"));
-//        Scene scene = new Scene(root, 1000, 700);
-//
-//        //Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//
-//        Stage primaryStage = new Stage();
-//        primaryStage.setScene(scene);
-//        primaryStage.setResizable(false);
-//        primaryStage.show();
-//        startTimer();
-//        playMusic();
+
+        Parent root = FXMLLoader.load(getClass().getResource("MenuView.fxml"));
+        Scene scene = new Scene(root, 1000, 700);
+
+        Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        primaryStage.close();
+        //Stage primaryStage = new Stage();
+        primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
+        primaryStage.show();
+
+    }
+
+    @FXML Text helloPlayer = new Text();
+
+    public void setHelloPlayer(String playerName) {
+        //System.out.println(playerName);
+        helloPlayer.setText("What's up " + playerName + "!");
+    }
+
+    @FXML Text scoreText = new Text();
+
 
     }
 
@@ -172,5 +196,4 @@ public class GameViewController implements Initializable {
 
 //    ArrayList<Integer>[][] cards =
 
-    }
 

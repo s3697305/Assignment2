@@ -30,7 +30,7 @@
    <left>
       <Pane prefHeight="505.0" prefWidth="70.0" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212b2f" height="578.0" layoutX="59.0" layoutY="-15.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" width="544.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212b2f" height="578.0" layoutX="59.0" layoutY="-15.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" width="544.0" />
          </children></Pane>
    </left>
    <top>
@@ -60,26 +60,36 @@
                   <Font name="BigNoodleTitling" size="80.0" />
                </font>
             </Text>
+            <Text fill="#eaff00" layoutX="773.0" layoutY="59.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="3.0" text="Level: 1" textAlignment="CENTER" wrappingWidth="199.107421875">
+               <font>
+                  <Font name="BigNoodleTitling" size="40.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
    </top>
    <right>
       <Pane prefHeight="540.0" prefWidth="415.0" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3f51c" height="48.0" layoutX="40.0" layoutY="141.0" stroke="#38168c" strokeType="INSIDE" strokeWidth="2.0" width="340.0" />
+            <Rectangle fx:id="timeRect" arcHeight="5.0" arcWidth="5.0" fill="#e3f51c" height="48.0" layoutX="38.0" layoutY="227.0" stroke="#38168c" strokeType="INSIDE" strokeWidth="2.0" width="330.0" />
             <Button layoutX="257.0" layoutY="496.0" mnemonicParsing="false" onAction="#btMenu" prefHeight="50.0" prefWidth="102.0" styleClass="Button" text="Menu" textFill="WHITE">
                <font>
                   <Font name="BigNoodleTitling" size="20.0" />
                </font></Button>
-            <Text fx:id="timeText" fill="#eaff00" layoutX="27.0" layoutY="119.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="3.0" text="TIME" textAlignment="CENTER" wrappingWidth="132.107421875">
+            <Text fx:id="timeText" fill="#eaff00" layoutX="38.0" layoutY="203.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="3.0" text="TIME" textAlignment="CENTER" wrappingWidth="132.107421875">
                <font>
                   <Font name="BigNoodleTitling" size="50.0" />
                </font>
             </Text>
             <Button fx:id="btVolume" ellipsisString="" layoutX="190.0" layoutY="496.0" mnemonicParsing="false" onAction="#setVolume" prefHeight="50.0" prefWidth="57.0" styleClass="Button" stylesheets="@style.css" />
-            <Text fx:id="timerText" fill="#baf800" layoutX="159.0" layoutY="118.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="3.0" text="LET'S GO!" textAlignment="CENTER" wrappingWidth="199.0">
+            <Text fx:id="timerText" fill="#baf800" layoutX="158.0" layoutY="203.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="3.0" text="LET'S GO!" textAlignment="CENTER" wrappingWidth="199.0">
                <font>
                   <Font name="BigNoodleTitling" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="helloPlayer" fill="#eaff00" layoutX="35.0" layoutY="58.0" stroke="RED" strokeType="OUTSIDE" strokeWidth="2.0" text="Hello!" textAlignment="CENTER" wrappingWidth="346.107421875">
+               <font>
+                  <Font name="BigNoodleTitling" size="40.0" />
                </font>
             </Text>
          </children>

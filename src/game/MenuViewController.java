@@ -45,7 +45,6 @@ public class MenuViewController implements Initializable {
 
     public void changeToGameView(ActionEvent event) throws IOException {
         setPlayerNameTF();
-        //System.out.println("GameView: " + player.getName());
 
         FXMLLoader loader = new FXMLLoader();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -32,13 +32,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
-import java.awt.event.MouseEvent;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 public class GameViewController implements Initializable {

@@ -10,9 +10,8 @@
   Acknowledgement: javafx Media Player by Prof. Quang
 */
 
-
 1. INTRODUCTION
-This memory card matching game is under development.
+This memory card matching game is to celebrate the cheerful victory of the Vietnam U22 Football Team.
 
 2. FEATURES
 - Card display: initially displays the back of 4x5 cards.
@@ -24,11 +23,20 @@ This memory card matching game is under development.
 - Creative functions: say hello to user's name and added a Menu button to go back to the Menu.
 
 3. INSTALLATION
-Unzip the 
+- Unzip the project and import the project into IntelliJ.
+- Setup for javafx environment.
+- ATTENTION: add "javafx.media" into the VM options for the media to be played.
+- ATTENTION: the whole GUI is built around "BigNoodleTitling" font. Install the fonts in the included folder to 
+get the intended design as in the screenshots below:
+
+![Menu](Menu.jpg)
+
+![Game](Game.jpg)
 
 4. KNOWN BUGS
-List the unfixed bugs and the workarounds, if any.
+Some features are still under development.
+- Sound will be reset when go back to the Menu screen and go the game.
+- Timer is also bugged when go to the Menu and go back to the Game.
 
 5. ACKNOWLEDGEMENT
-List the resources and help that you use to complete this software.
-Failing to do so might be considered as plagiarism.
+Credits to Prof. Quang for the "javafx.media" implementation for the media to be played.

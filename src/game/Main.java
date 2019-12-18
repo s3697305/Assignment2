@@ -31,7 +31,7 @@ public class Main extends Application {
         //Parent game = FXMLLoader.load(getClass().getResource("GameView.fxml"));
 
 
-        primaryStage.setTitle("Matching cards");
+        primaryStage.setTitle("Card Matching Game");
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("MenuView.fxml"));
         Parent menuViewParent = loader.load();
